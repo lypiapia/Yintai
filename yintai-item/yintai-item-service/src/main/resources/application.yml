@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: item-service
+  datasource:
+    url: jdbc:mysql:///yintai
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    #配置心跳间隔
+    lease-renewal-interval-in-seconds: 5
+    #配置过期时间
+    lease-expiration-duration-in-seconds: 15
+mybatis:
+  type-aliases-package: com.yintai.item.pojo
